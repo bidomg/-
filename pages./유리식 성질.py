@@ -1,19 +1,14 @@
 import streamlit as st
 
-# 페이지 기본 설정
+# 페이지 설정
 st.set_page_config(page_title="유리식 디지털 교과서", page_icon="📘", layout="wide")
 
-# CSS 스타일 정의
+# CSS 스타일
 st.markdown("""
     <style>
-        body {
-            background-color: rgb(203,147,160);
-        }
-
-        .main {
+        html, body, [class*="stApp"] {
             background-color: rgb(203,147,160);
             font-family: 'Noto Sans KR', sans-serif;
-            color: #000;
         }
 
         .title {
@@ -105,6 +100,32 @@ st.markdown("""
             <p>예: \\( \\dfrac{2x + 1}{x - 2} \\)</p>
             <p>→ 분모에 문자가 있음</p>
         </div>
+    </div>
+</div>
+""", unsafe_allow_html=True)
+
+# ✅ 새 섹션 3: 다항식과 유리식의 예시 모음
+st.markdown("""
+<div class="section">
+    <h2>3. 다항식과 유리식의 예시 모음</h2>
+    <p>아래는 다항식과 유리식의 구체적인 예시들입니다.</p>
+
+    <div class="example">
+        <h3>다항식의 예시</h3>
+        <ul>
+            <li>\\( x^2 + 3x + 2 \\)</li>
+            <li>\\( 4x^3 - 2x^2 + x - 7 \\)</li>
+            <li>\\( -5x + 8 \\)</li>
+        </ul>
+    </div>
+
+    <div class="example">
+        <h3>유리식의 예시</h3>
+        <ul>
+            <li>\\( \\dfrac{x+1}{x-3} \\)</li>
+            <li>\\( \\dfrac{2x^2 - 5}{x^2 + 1} \\)</li>
+            <li>\\( \\dfrac{3x+2}{x^2 - 4} \\)</li>
+        </ul>
     </div>
 </div>
 """, unsafe_allow_html=True)
